@@ -1,0 +1,16 @@
+<div class="row" style="background-color:#fff">
+    {{#each product}}
+
+    <div class="col-4">
+        <div class="text-center mb-5" style="border: 2px solid rgba(0,0,0,.125);padding:20px;  box-shadow:5px 5px 0px 0px rgb(122, 119, 119)">
+            <img class="" src="{{this.img}}" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">{{this.name}}</h4>
+                <p>&#x20B9;{{this.price}} </p>
+                <p class="card-text">{{this.specs}}</p>
+                <a href="/search{{this.href}}" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

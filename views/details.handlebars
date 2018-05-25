@@ -1,0 +1,34 @@
+<h1>{{product.name}}</h1>
+<hr>
+<div class="row">
+    <div class="col-4">
+        <img src="{{product.img}}" alt="">
+    </div>
+    <div class="col-8" style="margin-left:-87px;">
+        <h3>Best Price : &#x20B9;{{product.price}}</h3>
+        <hr>
+        <h6><b>Features:</b>  {{feature}}</h6>
+        <hr>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Seller</th>
+                    <th scope="col">Price</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {{#each prcTable}}
+                <tr>
+                    <th scope="row">{{inc @index}}</th>
+                    <td><img src="{{this.brand}}" alt="" srcset=""></td>
+                    <td>&#x20B9;{{this.price}}</td>
+                    
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+    </div>
+</div>
